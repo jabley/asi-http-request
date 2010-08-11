@@ -2728,7 +2728,7 @@ static NSOperationQueue *sharedQueue = nil;
 - (void)handleStreamComplete
 {	
 #if DEBUG_REQUEST_STATUS
-	NSLog(@"Request %@ finished downloading data (%d bytes)",self, [[self rawResponseData] length]);
+	NSLog(@"Request %@ finished downloading data",self);
 #endif
 	
 	[self setDownloadComplete:YES];
