@@ -542,6 +542,9 @@ static NSOperationQueue *sharedQueue = nil;
     [self performSelector:@selector(cancelOnRequestThread) onThread:[[self class] threadForRequest:self] withObject:nil waitUntilDone:NO];    
 }
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"%@ <%@>", [super description], [self url]];
+}
 
 - (BOOL)isCancelled
 {
